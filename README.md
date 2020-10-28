@@ -1,12 +1,12 @@
 # Metis Project3: FlightDelays
 
-**Summary**: In this project, I attempted to predict flight delays on US flights.  While this could also be a regression problem, in predicting the *length* of the delay, I made it a binary classification problem.  I simply said that any delay whatsoever would be classified as a delay.  This turned out to be about 20% in the aggregate.
+**Summary**: In this project, I attempted to predict flight delays on US flights.  While this could also be a regression problem, in predicting the *length* of the delay, I made it a binary classification problem.  I simply said that any delay whatsoever would be classified as a delay.  This turned out to be about 20% of flights in the aggregate.
 
-I ran a few different classification models, the most accurate turned out to be XG Boost, with an AUC score of 0.77 and a weighted F1 score of 
+I ran a few different classification models, the most accurate turned out to be XG Boost, with an AUC score of 0.77.
 
 Check out the project repo [here](https://github.com/drewhibbard/Metis_Project3_FlightDelays).
 
-I also built a web app that anybody can use to see the chances of their flight being delayed, as well as visual statistics about what went into that prediction.  Try it out [here]()!
+I also built a web app that anybody can use to see the chances of their flight being delayed, as well as visual statistics about what went into that prediction.  Try it out [here](https://flightdelayhibbard.herokuapp.com/)!
 
 ## Data
 
@@ -60,14 +60,14 @@ I tested the following classification models and received the following scores.
 
 | Model | AUC Score | F1 Score | 
 | ------| ----------| ---------|
-Logistic Regression | 
-Random Forest | 
-Gaussian Naive Bayes | 
-**XG Boost** | 
+Logistic Regression | 0.74 | 0.78 |
+Random Forest | 0.76 | 0.79 |
+Gaussian Naive Bayes | 0.71 | 0.78 | 
+**XG Boost** | 0.76 | 0.79 | 
 K Nearest Neighbors | N/A - too slow | N/A - too slow | 
 
 
-As you can see XG Boost was the best-performing model (no surprise there) although it was not the fastest model.
+As you can see XG Boost and Random Forest tied for the best model with a 0.76 AUC, but since XG Boost was much faster it is the winner.
 
-I also tried two ensemble methods, a voting classifier and the stacked method...
+Because correlations between model predictions were low (~0.5) I also tried out a Voting Classifier, but the slight benefit was not worth the extra time to run the model.
 

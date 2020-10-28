@@ -2,7 +2,7 @@
 
 **Summary**: In this project, I attempted to predict flight delays on US flights.  While this could also be a regression problem, in predicting the *length* of the delay, I made it a binary classification problem.  I simply said that any delay whatsoever would be classified as a delay.  This turned out to be about 20% of flights in the aggregate.
 
-I ran a few different classification models, the most accurate turned out to be XG Boost, with an AUC score of 0.77.
+I ran a few different classification models, the most accurate turned out to be XG Boost, with an AUC score of 0.77.  It had an F1 score of 48% for actual delayed flights, and an F1 score of 85% for non-delayed flights.
 
 Check out the project repo [here](https://github.com/drewhibbard/Metis_Project3_FlightDelays).
 
@@ -58,13 +58,13 @@ There were many categorical features in my data set with high numbers of unique 
 
 I tested the following classification models and received the following scores.
 
-| Model | AUC Score | F1 Score | 
-| ------| ----------| ---------|
-Logistic Regression | 0.74 | 0.78 |
-Random Forest | 0.76 | 0.79 |
-Gaussian Naive Bayes | 0.71 | 0.78 | 
-**XG Boost** | 0.76 | 0.79 | 
-K Nearest Neighbors | N/A - too slow | N/A - too slow | 
+| Model | AUC Score | F1 (Delays) | F1 (Non-Delays) | 
+| ------| ----------| ------------|-----------------|
+Logistic Regression | 0.74 | 0.43 | 0.86 | 
+Random Forest | 0.76 | 0.49 | 0.85 | 
+Gaussian Naive Bayes | 0.71 | 0.40 | 0.86 |
+**XG Boost** | 0.76 | 0.48 | 0.85 | 
+K Nearest Neighbors | N/A - too slow | 
 
 
 As you can see XG Boost and Random Forest tied for the best model with a 0.76 AUC, but since XG Boost was much faster it is the winner.

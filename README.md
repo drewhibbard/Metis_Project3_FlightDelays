@@ -4,8 +4,6 @@
 
 I ran a few different classification models, the most accurate turned out to be XG Boost, with an AUC score of 0.77.  It had an F1 score of 48% for actual delayed flights, and an F1 score of 85% for non-delayed flights.
 
-Check out the project repo [here](https://github.com/drewhibbard/Metis_Project3_FlightDelays).
-
 I also built a web app that anybody can use to see the chances of their flight being delayed, as well as visual statistics about what went into that prediction.  Try it out [here](https://flightdelayhibbard.herokuapp.com/)!
 
 ## Data
@@ -52,6 +50,12 @@ There were many categorical features in my data set with high numbers of unique 
 - % of flights delayed for each month
 - % of flights delayed for each hour of day
 - % of flights delayed for each day of the week
+
+A few of the results I imagine you want to see are below.  For more check out the Tableau workbook or Streamlit app.
+
+![](images/by_airline.png)
+
+![](images/flight_delay_map.png)
 
 
 ## Predictive Modeling

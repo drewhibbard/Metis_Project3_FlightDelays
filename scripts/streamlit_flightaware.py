@@ -22,14 +22,15 @@ import streamlit as st
 import matplotlib.pyplot
 import seaborn as sns
 import math
+import credentials
 sns.set()
 
 np.seterr(divide='ignore', invalid='ignore')
 
 
 #connect to the Flightaware API
-username = 'drewhibbard'
-key = 'e3b96bb77a74f8670797a353cdec88fdaee2aa16'
+username = credentials.username
+key = credentials.key
 url = 'http://flightxml.flightaware.com/soap/FlightXML2/wsdl'
 
 logging.basicConfig(level=logging.INFO)
